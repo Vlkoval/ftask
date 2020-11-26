@@ -3,9 +3,13 @@
  * the standard input according to the problem statement.
  **/
 
+let mainI = 0;
+let countLoop = 5
+let fallplace = 0;
+
 
 // game loop
-while (true) {
+while (mainI < countLoop) {
     let color1 = [];
     let color2 = [];
     let readlineTest = [];
@@ -26,20 +30,35 @@ while (true) {
 
     for (let i = 0; i < 12; i++) {
         const row = readline(); // One line of the map ('.' = empty, '0' = skull block, '1' to '5' = colored block)
+
+        console.error(`row1-${i + 1}  ${row}`)
         row1 = row
 
     }
-    
+
+
+    fallplace = readlineTest[mainI]
+    console.error(`fallplace ${fallplace}`);
+
+    // for (let i = 0; i < 5; i++) {
+    //     for (let j = 0; j < 5; j++) {
+    //         fallplace = color1[mainI]
+    //     }
+    // }
+
     console.log('0'); // "x": the column in which to drop your blocks
-    
+
     const score2 = parseInt(readline());
-    
+
     for (let i = 0; i < 12; i++) {
+
         const row = readline();
+
+        console.error(`row2-${i + 1} ${row}`)
         row2 = row
     }
-    
-    
+
+
     console.error('readlineTest')
     console.error(readlineTest)
     console.error('color1')
@@ -54,12 +73,12 @@ while (true) {
     console.error(row1)
     console.error('row2')
     console.error(row2)
-    
+
     // Write an action using console.log()
     // To debug: console.error('Debug messages...');
-    
+
     console.log('0'); // "x": the column in which to drop your blocks
-    
-    // break
+    mainI += 1
+    //  break
 }
 
